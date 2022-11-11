@@ -25,7 +25,7 @@ var x = setInterval(function() {
     if (distance < 0) {
         clearInterval(x);
         const element = document.getElementById("demo");
-        element.innerHTML = "<a href= 'page'>Let's get started! </a>";
+        element.innerHTML = "<a href= 'introduction'>Let's get started! </a>";
 
 
     }
