@@ -1,17 +1,42 @@
 body {
-
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #192824;
     text-align: center;
     width: 2750px;
-    font-size: 35px;
+    background-image: url(../images/intro.jpg);
 
 }
-p {
-    text-shadow: 0 0 3px #FFFFFF, 0 0 5px #FFFFFF;
+
+br {
+
+    margin: 10px 0;
 }
 
+#first {
+    font-family: "rd", serif;
+    font-size: 77px;
+    text-shadow: 2px 2px black;
+    color:  #ECE2D7;
+
+}
+
+#second {
+    font-family: "cm", serif;
+    font-size: 60px;
+    text-shadow: 2px 2px black;
+    color: white;
+    position: absolute;
+    top: 600px;
+    left: 1500px;
+}
+
+#position {
+    border-radius: 8px;
+    position: absolute;
+    top: 580px;
+    left: 1000px;
+}
 
 
 

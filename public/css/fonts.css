@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "ef";
+    src: local("/fonts/ef.ttf"),
+    url("/fonts/ef.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "rd";
+    src: local("/fonts/rd.ttf"),
+    url("/fonts/rd.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "cm";
+    src: local("/fonts/cm.ttf"),
+    url("/fonts/cm.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "snow";
+    src: local("/fonts/snow.ttf"),
+    url("/fonts/snow.ttf") format("truetype");
+}
+
+
