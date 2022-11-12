@@ -1,4 +1,10 @@
 @font-face {
+    font-family: "Archivo Black";
+    src: local("/fonts/Archivo Black.ttf"),
+    url("/fonts/Archivo Black.ttf") format("truetype");
+}
+
+@font-face {
     font-family: "ef";
     src: local("/fonts/ef.ttf"),
     url("/fonts/ef.ttf") format("truetype");

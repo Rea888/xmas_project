@@ -13,25 +13,29 @@ br {
     margin: 10px 0;
 }
 
-#first {
+.intro_content {
+
+    color: #ECE2D7;
+    text-shadow: 2px 2px black;
+}
+
+
+
+.first {
     font-family: "rd", serif;
     font-size: 77px;
-    text-shadow: 2px 2px black;
-    color:  #ECE2D7;
 
 }
 
-#second {
+.second {
     font-family: "cm", serif;
     font-size: 60px;
-    text-shadow: 2px 2px black;
-    color: white;
     position: absolute;
     top: 600px;
     left: 1500px;
 }
 
-#position {
+.moth {
     border-radius: 8px;
     position: absolute;
     top: 580px;
