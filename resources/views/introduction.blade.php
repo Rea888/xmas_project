@@ -2,6 +2,8 @@
 
 <link href="{{ asset('css/introduction.css') }}" rel="stylesheet">
 <link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
+
+
 @section('content')
 
     <div class="intro_content">
@@ -23,6 +25,7 @@
         <p class="second">3301</p>
     </div>
 
-    <a href='second'><img class="moth" src="/images/moth.png" alt="moth" width="300" height="300"></a>
+    <img class="moth" src="images/moth.png" alt="moth" width="300px" height="300px">
+
 
 @stop

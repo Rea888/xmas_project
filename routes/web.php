@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CodeImage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::get('/introduction', function(){
 Route::get('/second', function(){
     return "second puzle";
 });
+
+Route::get('/code', [CodeImage::class, 'coding']);

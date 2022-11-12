@@ -2,21 +2,23 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #192824;
-    text-align: center;
-    width: 2750px;
+
     background-image: url(../images/intro.jpg);
 
 }
 
 br {
 
-    margin: 10px 0;
+    margin: 35px 0;
 }
 
 .intro_content {
-
+    text-align: center;
     color: #ECE2D7;
     text-shadow: 2px 2px black;
+    position: absolute;
+    width: 2750px;
+    bottom: 180px;
 }
 
 
@@ -31,7 +33,7 @@ br {
     font-family: "cm", serif;
     font-size: 60px;
     position: absolute;
-    top: 600px;
+    top: 700px;
     left: 1500px;
 }
 
