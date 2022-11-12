@@ -8,11 +8,11 @@
 
     <div class="intro_content">
 
-        <p class="first">Greetings,1
+        <p class="first">Greetings,<span class = "one">1</span>
             <br/>
             we are looking for highly intelligent
             <br/>
-            individuals to free Santa Claus!
+            individuals to free , Santa Claus!
             <br/>
             There is a message hidden in this image.
             <br/>
@@ -20,7 +20,7 @@
             <br/>
             to finding him. Save Christmas!
             <br/>
-            Good luck! 2</p>
+            Good luck! <span class = "two">2</span></p>
 
         <p class="second">3301</p>
     </div>

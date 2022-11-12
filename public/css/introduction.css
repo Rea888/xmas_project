@@ -2,7 +2,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #192824;
-
     background-image: url(../images/intro.jpg);
 
 }
@@ -18,7 +17,7 @@ br {
     text-shadow: 2px 2px black;
     position: absolute;
     width: 2750px;
-    bottom: 180px;
+    bottom: 160px;
 }
 
 
@@ -33,15 +32,23 @@ br {
     font-family: "cm", serif;
     font-size: 60px;
     position: absolute;
-    top: 700px;
+    top: 720px;
     left: 1500px;
+}
+
+span.one{
+    color: darkgreen;
+}
+
+span.two{
+    color: orange;
 }
 
 .moth {
     border-radius: 8px;
     position: absolute;
-    top: 580px;
-    left: 1000px;
+    top: 600px;
+    left: 950px;
 }
 
 
