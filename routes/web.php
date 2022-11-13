@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\CodeImage;
 use Illuminate\Support\Facades\Route;
-
+use \App\Http\Middleware\ForbidAccessBeforeChristmas;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,10 +20,10 @@ Route::get('/', function () {
 
 Route::get('/introduction', function(){
     return view('introduction');
-});
+})->middleware(ForbidAccessBeforeChristmas::class);
 
 Route::get('/second', function(){
     return "second puzle";
 });
 
-Route::get('/code', [CodeImage::class, 'coding']);
+Route::get('/code', [ForbidAccessBeforeChristmas::class, 'handle']);
