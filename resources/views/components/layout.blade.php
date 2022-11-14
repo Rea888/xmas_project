@@ -7,19 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Xmas</title>
+    {{$scripts}}
 
 </head>
 <body>
 
-<div class="container">
+    {{$slot}}
 
-    @yield('content')
-
-</div>
-
-
-
-@yield('footer')
 
 </body>
 </html>

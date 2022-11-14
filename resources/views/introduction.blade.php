@@ -1,14 +1,12 @@
-@extends('components.layout')
+<x-layout>
 
-<link href="{{ asset('css/introduction.css') }}" rel="stylesheet">
-<link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
-
-
-@section('content')
+    <x-slot name="scripts">
+        <link href="{{ asset('css/introduction.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
+    </x-slot>
 
     <div class="intro_content">
-
-        <p class="first">Greetings,<span class = "one">1</span>
+        <p class="first">Greetings,<span class="one">1</span>
             <br/>
             we are looking for highly intelligent
             <br/>
@@ -20,12 +18,11 @@
             <br/>
             to finding him. Save Christmas!
             <br/>
-            Good luck! <span class = "two">2</span></p>
+            Good luck! <span class="two">2</span></p>
 
         <p class="second">3301</p>
     </div>
 
     <img class="moth" src="images/moth.png" alt="moth" width="300px" height="300px">
 
-
-@stop
+</x-layout>

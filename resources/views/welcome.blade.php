@@ -1,11 +1,11 @@
-@extends('components.layout')
+<x-layout>
 
-<link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
-<script src="{{ asset('js/welcome.js') }}" defer></script>
-<link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
+    <x-slot name="scripts">
+    <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/welcome.js') }}" defer></script>
+    <link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
+    </x-slot>
 
-
-@section('content')
     <p id="demo" class="demo"></p>
 
-@stop
+</x-layout>

@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\CodeImage;
 use Illuminate\Support\Facades\Route;
-use \App\Http\Middleware\ForbidAccessBeforeChristmas;
+use App\Http\Middleware\ForbidAccessBeforeChristmas;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,8 +13,8 @@ Route::middleware(ForbidAccessBeforeChristmas::class)->group(function () {
         return view('introduction');
     });
 
-    Route::get('/second', function () {
-        return "second puzle";
+    Route::get('/nice_job', function () {
+        return "second puzzle";
     });
 
 });
