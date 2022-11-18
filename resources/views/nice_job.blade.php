@@ -189,7 +189,7 @@
     </div>
 
     <div class="button">
-    {!! Form::submit('Send      ', ['class' => 'btn btn-success']) !!}
+    {!! Form::button('Send     ', ['class' => 'btn btn-success' , 'type' => 'submit']) !!}
     </div>
     {!! Form::close() !!}
 

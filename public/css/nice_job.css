@@ -190,12 +190,16 @@ textarea{
     bottom: 15px;
 }
 
-.button {
+button {
     position: absolute;
     margin-left: 400px;
+    height: 30px;
+    width: 100px;
     bottom: 30px;
+    font-family: "cm", serif;
+    font-weight: bold;
+    font-size: 15px;
     padding: 5px;
-    font: bold 0.6em sans-serif;
     border: 2px solid #333;
     border-radius: 5px;
     background: none;
@@ -203,8 +207,8 @@ textarea{
     transform: rotate(-1.5deg);
 }
 
-.button:after {
-    content: " >>>";
+button:after {
+    content: ">>>";
 }
 
 button:hover,

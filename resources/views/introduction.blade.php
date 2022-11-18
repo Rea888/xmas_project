@@ -5,8 +5,8 @@
         <link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
     </x-slot>
 
-    <div class="intro_content">
-        <p class="first">Greetings,<span class="one">1</span>
+    <div class="first">
+        <p>Greetings,<span class="one">1</span>
             <br/>
             we are looking for highly intelligent
             <br/>
@@ -19,10 +19,18 @@
             to finding him. Save Christmas!
             <br/>
             Good luck! <span class="two">2</span></p>
-
-        <p class="second">3301</p>
     </div>
 
-    <img class="moth" src="images/moth.png" alt="moth" width="300px" height="300px">
+
+        <div class="media">
+            <div class="media-left">
+                <img class="media-object" src="images/moth.png" alt="moth">
+            </div>
+            <div class="media-body">
+                <p class="media-heading">3301</p>
+            </div>
+        </div>
+
+
 
 </x-layout>

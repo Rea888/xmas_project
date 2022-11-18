@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SolutiomController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\ForbidAccessBeforeChristmas;
 
@@ -25,8 +26,6 @@ Route::middleware(ForbidAccessBeforeChristmas::class)->group(function () {
 
 
 
+Auth::routes();
 
-
-
-
-
+Route::get('/home', 'HomeController@index')->name('home');
