@@ -1,13 +1,11 @@
 <x-layout>
 
-
     <x-slot name="scripts">
         <link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
         <link href="{{ asset('css/nice_job.css') }}" rel="stylesheet">
-        <script src="{{ asset('js/nice_job.js') }}" defer></script>
     </x-slot>
 
-    <svg id="Christmas_Lights" viewBox="0 0 612 792">
+    <svg id="xmas_lights" viewBox="0 0 800 800">
 
         <path class="light_cord"
               d="M-673.8-29.1c17.3 23.7 38.1 34.3 63.6 48.8 45.4 25.7 93.4 39.1 145.4 44.4 58 6 112.1 6.2 164-9 64.2-18.8 113.7-51 113.7-51 13.3 17.3 28.1 25.3 50.1 34.5 20.3 8.5 43.8 17 66.1 23 30.1 8.1 67.1 8.4 99.1 8.3 66.5-0.1 134-3.3 197.4-17.8 30.3-6.9 76-24 89.3-32 9.3 4.7 22.4 16.1 34.7 22.8 34 18.6 73.2 33.8 111 42.8 46.1 11 93.6 5.6 137-12.8 14.4-6.1 56.6-26.1 65.7-38.5 8.8 15.1 102.8 33.1 151.5 32.5 68.4-0.8 142.2-10.5 196.7-55.9 9.7 11.9 28.3 20 42.5 25.2 35.5 12.9 76.3 22 113.9 24.9 50.2 3.9 100.3 3.9 150.1-5.3 25.6-4.7 50.6-14.2 74.4-24.8 6.7-3 36.4-14.8 43.1-20.1"/>
@@ -155,53 +153,59 @@
               d="M-602.2 40.4c0 0.5-0.4 1-1 1h-14.1c-0.5 0-1-0.4-1-1l0.5-14.9c0-0.5 0.5-1 1-1h12.9c0.6 0 1 0.4 1 1L-602.2 40.4z"/>
         <path class="light_fixture"
               d="M-611 26.9c-0.5-0.2-0.7-0.8-0.5-1.3l0 0c0.2-0.5 0.3-0.9 0.3-1.3l0 0c0-1.5-1.4-2.7-2.2-3.6l0 0c-0.5-0.6-0.7-1.5-0.8-2.4l0 0c-0.1-1.5 1-3.4 3.3-3.6l0 0 0.1 0 0.1 0c1.2 0 2.2 0.3 2.9 1l0 0c0.7 0.6 1 1.5 1 2.3l0 0c0 1.3-0.6 2.4-1.2 3.4l0 0c-0.4 0.6-0.9 1.1-1.4 1.5l0 0c0.2 0.5 0.3 1 0.3 1.5l0 0c0 0.6-0.1 1.3-0.4 2.1l0 0h0c-0.2 0.4-0.5 0.6-0.9 0.6l0 0C-610.7 27-610.9 26.9-611 26.9L-611 26.9zM-612.3 18.3c0 0.5 0.2 1.1 0.3 1.2l0 0c0.2 0.3 0.8 0.8 1.4 1.6l0 0c0.2-0.2 0.5-0.5 0.8-0.9l0 0c0.5-0.7 0.9-1.7 0.9-2.3l0 0c-0.1-0.7 0-1-1.9-1.2l0 0C-612.1 16.9-612.2 17.5-612.3 18.3L-612.3 18.3z"/>
+
     </svg>
 
 
-    {!!Form::open(['route' => 'nice_job']) !!}
-    {!!Form::open(['action' => 'SolutiomController@getSolution']) !!}
-    {{ csrf_field() }}
-    <div class="to">
-    <h1>to: Santa Clause</h1>
-    </div>
-    <div class="from">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <div class="row">
+                    <div class="img_container">
+                        <audio id="audio_play">
+                            <source src="audio/dial.wav" type="audio/wav">
+                            <source src="audio/dial.mp3" type="audio/mpeg">
+                        </audio>
+                        <img src="images/mobile.png" class="img-fluid" alt="mobile"
+                             onclick="document.getElementById('audio_play').play(); return false;"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-10">
+                <div class="container" id="text-responsive">
+                    {!!Form::open(['route' => 'nice_job']) !!}
+                    {!!Form::open(['action' => 'SolutiomController@getSolution']) !!}
+                    {{ csrf_field() }}
+                    <div class="form d-flex justify-content-between">
+                        <div class="col" id="text-responsive">
+                            <div class="text1">
+                            <h3>If you know the right answer,</h3>
+                            <h3>send to Santa in this letter!</h3>
+                            <h3> This <i>calling</i> is really hard,</h3>
+                            <h3> Don't be so <i>arrogant</i>,</h3>
+                            <h3> you won't <i>dial</i> for assistant!</h3>
+                            </div>
+                        </div>
+                        <div class="col" id="text-responsive">
+                            <div class="text2">
+                            <h4>to: Santa Clause</h4>
+                            <h4>from:{!!Form::text('name', null, array('placeholder'=>'First-Last name')) !!}</h4>
+                            <h4>reply:{!!Form::email('email', null, array('placeholder'=>'email address')) !!}</h4>
+                            <h4>solution:{!!Form::text('solution', null, array('placeholder'=>'text')) !!}</h4>
+                            <h4>{!! Form::button('Send     ', ['class' => 'btn btn-success' , 'type' => 'submit']) !!}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    {!! Form::close() !!}
 
-        <h1>from:{!!Form::text('name', null, array('placeholder'=>'First name Last name')) !!}</h1>
-    </div>
-    <div class="solution">
-        <h1>solution:{!!Form::text('solution', null, array('placeholder'=>'text')) !!}</h1>
-    </div>
-    <div class="reply">
-        <h1>reply:{!!Form::email('email', null, array('placeholder'=>'email address')) !!}</h1>
-    </div>
-    <div class="message">
-        <p> If you know the right answer,
-            <br/>
-            send to Santa in this letter!
-            <br/>
-            This <i>calling</i> is really hard,
-            <br/>
-            Don't be so <i>arrogant</i>,
-            <br/>
-            that you won't <i>dial</i> for assistant!
-            </p>
 
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4" id="third_col"></div>
     </div>
 
-    <div class="button">
-    {!! Form::button('Send     ', ['class' => 'btn btn-success' , 'type' => 'submit']) !!}
-    </div>
-    {!! Form::close() !!}
-
-    <div class="audio">
-        <audio controls>
-            <source src="audio/dial.wav" type="audio/wav">
-            <source src="audio/dial.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-
-    <img src="images/mobile.png">
 
 </x-layout>
 

@@ -1,15 +1,19 @@
 body {
 
+    background: url(../images/TreeSnowman.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../images/TreeSnowman.jpg);
-    background-color: #192824;
+    -o-background-size: cover;
+}
+html,body {
+    height: 100%;
 }
 
 
-#Christmas_Lights {
+#xmas_lights {
     height: 100%;
-    margin-left: -7px;
+    margin-left: 0vh;
     position: absolute;
     width: 100%;
     z-index: -1000
@@ -143,59 +147,27 @@ body {
 
 
 form {
-    position: absolute;
-    width: 620px;
-    height: 352px;
-    margin-left: 550px;
-    top:270px;
+    margin-top: 40%;
+    display: flex;
+    height: 38vh;
+    width: 68vh;
     background-image:url(../images/letter.jpg);
     font-family: "cm", serif;
     font-size: 12px;
-
-
 }
+
+
 input,
 textarea{
-
+    font-family: "ef", serif;
     border: none;
     padding: 0 15px;
-    margin: 0;
-    width: 60%;
+    width: 70%;
+    height: 3vh;
     background: none;
-}
-.to{
-    position: absolute;
-    margin-left: 350px;
-    bottom: 160px;
-}
-.from{
-    position: absolute;
-    margin-left: 350px;
-    bottom: 126px;
-}
-.reply{
-    position: absolute;
-    margin-left: 350px;
-    bottom: 93px;
-}
-.solution{
-    position: absolute;
-    margin-left: 350px;
-    bottom: 49px;
-}
-.message{
-    font-size:25px;
-    position: absolute;
-    margin-left: 25px;
-    bottom: 15px;
 }
 
 button {
-    position: absolute;
-    margin-left: 400px;
-    height: 30px;
-    width: 100px;
-    bottom: 30px;
     font-family: "cm", serif;
     font-weight: bold;
     font-size: 15px;
@@ -218,21 +190,51 @@ button:focus {
     color: #fff;
 }
 
+.img_container{
+    width: 30%;
+    margin-right: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 70vh;
+}
+
+audio {
+    width: 1vw;
+    height: 1vh;
+    float: inherit;
+    z-index: 1000;
+    margin-left: 5vw;
+}
+.text1{
+    margin-top: 15vh;
+}
+.text2{
+    margin-top: 16vh;
+}
+
+#text-responsive {
+    font-size: calc(100% + 1vw + 1vh);
+}
+
 img{
-    position: absolute;
-    margin-left: 60px;
-    bottom: 70px;
-    z-index: revert;
+    width: 40% !important;
+    height: auto !important;
+}
+
+@media screen and (max-width: 800px) {
+    #third_col {
+        display: none !important;
+    }
+    .form{
+        float: left;
+        font-size: calc(100% + 1vw + 1vh);
+    }
+    .input,
+    textarea{
+        font-size: calc(100% + 1vw + 1vh);
+    }
 
 }
 
-audio{
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    margin-left: 70px;
-    bottom: 80px;
-    z-index: 10000;
 
-
-}

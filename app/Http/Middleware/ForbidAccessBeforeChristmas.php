@@ -23,7 +23,7 @@ class ForbidAccessBeforeChristmas
 
     private function isItXmasYet(): bool
     {
-        if(App::environment() !== 'prod'){
+        if(App::environment() !== 'production'){
             return true;
         }
         $currentTime = new \DateTime();

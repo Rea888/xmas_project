@@ -8,14 +8,25 @@ body {
 }
 html,
 body{
-    height: 99%;
+    height: 80%;
 }
 .container {
-    height: 100%;
+    font-size: 4vh;
+    height: 150%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: center;
 }
+
+.text-responsive {
+    font-size: calc(100% + 3vw + 3vh);
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+
 
 :root {
     --shadow-color: #FF9E9E;
@@ -23,13 +34,6 @@ body{
 }
 
 
-p {
-    font-size: 180px;
-    font-family: "Archivo Black", "Archivo", sans-serif;
-    font-weight: normal;
-    text-align: center;
-
-}
 
 #demo {
     color: white;

@@ -8,7 +8,7 @@
 
 
     <div class="container">
-            <p id="demo" class="demo"></p>
+        <p id="demo" class="text-responsive"></p>
     </div>
 
 </x-layout>
