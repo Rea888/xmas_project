@@ -157,9 +157,9 @@
     </svg>
 
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-sm-4">
+            <div class="col-lg-4 col-sm-3">
                 <div class="row">
                     <div class="img_container">
                         <audio id="audio_play">
@@ -171,14 +171,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-10">
-                <div class="container" id="text-responsive">
+            <div class="col-lg-4 col-sm-4">
+                <div class="bgSizeContain">
                     {!!Form::open(['route' => 'nice_job']) !!}
                     {!!Form::open(['action' => 'SolutiomController@getSolution']) !!}
                     {{ csrf_field() }}
                     <div class="form d-flex justify-content-between">
-                        <div class="col" id="text-responsive">
-                            <div class="text1">
+                        <div class="col-6" id="text-responsive">
+                            <div class="text1" id="text-responsive">
                             <h3>If you know the right answer,</h3>
                             <h3>send to Santa in this letter!</h3>
                             <h3> This <i>calling</i> is really hard,</h3>
@@ -186,24 +186,22 @@
                             <h3> you won't <i>dial</i> for assistant!</h3>
                             </div>
                         </div>
-                        <div class="col" id="text-responsive">
-                            <div class="text2">
+                        <div class="col-9" id="text-responsive">
+                            <div class="text2" id="text-responsive">
                             <h4>to: Santa Clause</h4>
                             <h4>from:{!!Form::text('name', null, array('placeholder'=>'First-Last name')) !!}</h4>
                             <h4>reply:{!!Form::email('email', null, array('placeholder'=>'email address')) !!}</h4>
                             <h4>solution:{!!Form::text('solution', null, array('placeholder'=>'text')) !!}</h4>
-                            <h4>{!! Form::button('Send     ', ['class' => 'btn btn-success' , 'type' => 'submit']) !!}</h4>
+                            <h4>{!! Form::button('Send     ', ['class' => 'button4' , 'type' => 'submit']) !!}</h4>
                             </div>
                         </div>
                     </div>
                     {!! Form::close() !!}
-
-
                 </div>
             </div>
         </div>
 
-        <div class="col-4" id="third_col"></div>
+        <div class="col-lg-4" id="third_col"></div>
     </div>
 
 

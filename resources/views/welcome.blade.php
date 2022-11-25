@@ -7,7 +7,7 @@
     </x-slot>
 
 
-    <div class="container">
+    <div class="container-fullwidth">
         <p id="demo" class="text-responsive"></p>
     </div>
 

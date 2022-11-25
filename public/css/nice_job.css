@@ -6,7 +6,8 @@ body {
     background-size: cover;
     -o-background-size: cover;
 }
-html,body {
+
+html, body {
     height: 100%;
 }
 
@@ -149,35 +150,74 @@ html,body {
 form {
     margin-top: 40%;
     display: flex;
-    height: 38vh;
-    width: 68vh;
-    background-image:url(../images/letter.jpg);
+    height: 39vh;
+    width: 70vh;
+}
+
+.text1 {
+    margin-top: 1vh;
     font-family: "cm", serif;
-    font-size: 12px;
+}
+
+.text2 {
+    margin-bottom: -5vh;
+    font-family: "cm", serif;
+}
+
+.bgSizeContain {
+    background-image: url(../images/letter.jpg);
+    background-size: contain;
+    height: 39vh;
+    width: 70vh;
+    resize: both;
+}
+
+.col-6 {
+    float: left;
+    width: 25%;
+    margin-top: 16vh;
+}
+
+.col-9 {
+    float: left;
+    width: 75%;
+    margin-top: 17vh;
 }
 
 
 input,
-textarea{
+textarea {
     font-family: "ef", serif;
     border: none;
-    padding: 0 15px;
+    padding: 0 3vh;
     width: 70%;
     height: 3vh;
     background: none;
 }
 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 button {
     font-family: "cm", serif;
     font-weight: bold;
-    font-size: 15px;
-    padding: 5px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    background: none;
+    font-size: 5px;
+    border: 1px solid #333;
+    color: white;
+    padding: 2px;
+
+    background: mediumseagreen;
     cursor: pointer;
     transform: rotate(-1.5deg);
 }
+
+.button4 {
+    border-radius: 5px;
+}
+
 
 button:after {
     content: ">>>";
@@ -190,7 +230,7 @@ button:focus {
     color: #fff;
 }
 
-.img_container{
+.img_container {
     width: 30%;
     margin-right: 30%;
     display: flex;
@@ -199,42 +239,57 @@ button:focus {
     margin-top: 70vh;
 }
 
-audio {
-    width: 1vw;
-    height: 1vh;
-    float: inherit;
-    z-index: 1000;
-    margin-left: 5vw;
-}
-.text1{
-    margin-top: 15vh;
-}
-.text2{
-    margin-top: 16vh;
-}
-
 #text-responsive {
     font-size: calc(100% + 1vw + 1vh);
 }
 
-img{
+
+img {
     width: 40% !important;
     height: auto !important;
 }
 
-@media screen and (max-width: 800px) {
-    #third_col {
-        display: none !important;
-    }
-    .form{
-        float: left;
-        font-size: calc(100% + 1vw + 1vh);
-    }
-    .input,
-    textarea{
-        font-size: calc(100% + 1vw + 1vh);
+@media screen and (max-width: 2000px) {
+    .form {
+        background-size: contain;
+        resize: both;
     }
 
+    .text1 h3 {
+        font-size: calc(1% + 0.8vw + 0.8vh);
+    }
+
+    .text2 h4 {
+        margin-bottom: 1vh;
+        font-size: calc(1% + 0.8vw + 0.8vh);
+    }
+
+    .btn {
+        height: 25%;
+    }
+    .col-sm-4{
+        margin-left: 5vh;
+    }
+
+
 }
+
+/*@media screen and (max-width: 800px) {*/
+/*    #third_col {*/
+/*        display: none !important;*/
+/*    }*/
+/*    .form{*/
+/*        float: left;*/
+/*        font-size: calc(100% + 1vw + 1vh);*/
+/*    }*/
+/*    .input,*/
+/*    textarea{*/
+/*        font-size: calc(100% + 1vw + 1vh);*/
+/*    }*/
+/*    .col{*/
+/*        width: 40% !important;*/
+/*        height: auto !important;*/
+/*    }*/
+/*}*/
 
 

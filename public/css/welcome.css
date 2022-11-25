@@ -8,14 +8,14 @@ body {
 }
 html,
 body{
-    height: 80%;
+    height: 70%;
 }
-.container {
+
+
+
+.container-fullwidth {
     font-size: 4vh;
-    height: 150%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 40vh;
     text-align: center;
 }
 
