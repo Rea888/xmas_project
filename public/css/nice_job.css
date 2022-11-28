@@ -155,12 +155,13 @@ form {
 }
 
 .text1 {
-    margin-top: 1vh;
+    margin-left: 1vh;
     font-family: "cm", serif;
 }
 
 .text2 {
-    margin-bottom: -5vh;
+
+    margin-bottom: 53vh;
     font-family: "cm", serif;
 }
 
@@ -187,12 +188,14 @@ form {
 
 input,
 textarea {
-    font-family: "ef", serif;
+    font-family: "cm", serif !important;
+    font-size: 2vh !important;
     border: none;
-    padding: 0 3vh;
-    width: 70%;
+    outline: none;
+    width: 50%;
     height: 3vh;
     background: none;
+    text-align: center;
 }
 
 .row:after {
@@ -202,13 +205,13 @@ textarea {
 }
 
 button {
+
     font-family: "cm", serif;
     font-weight: bold;
     font-size: 5px;
     border: 1px solid #333;
     color: white;
     padding: 2px;
-
     background: mediumseagreen;
     cursor: pointer;
     transform: rotate(-1.5deg);
@@ -267,29 +270,8 @@ img {
     .btn {
         height: 25%;
     }
-    .col-sm-4{
+
+    .col-sm-4 {
         margin-left: 5vh;
     }
-
-
 }
-
-/*@media screen and (max-width: 800px) {*/
-/*    #third_col {*/
-/*        display: none !important;*/
-/*    }*/
-/*    .form{*/
-/*        float: left;*/
-/*        font-size: calc(100% + 1vw + 1vh);*/
-/*    }*/
-/*    .input,*/
-/*    textarea{*/
-/*        font-size: calc(100% + 1vw + 1vh);*/
-/*    }*/
-/*    .col{*/
-/*        width: 40% !important;*/
-/*        height: auto !important;*/
-/*    }*/
-/*}*/
-
-
