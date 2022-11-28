@@ -1,46 +1,67 @@
 body {
+    background: url(../images/intro.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #192824;
-    text-align: center;
-    width: 2750px;
-    background-image: url(../images/intro.jpg);
+    -o-background-size: cover;
 
 }
 
 br {
-
-    margin: 10px 0;
+    margin: 3px 0;
 }
+#text-responsive {
+     font-size: calc(100% + 2vw + 2vh);
 
-.intro_content {
-
-    color: #ECE2D7;
-    text-shadow: 2px 2px black;
-}
-
-
+ }
 
 .first {
     font-family: "rd", serif;
-    font-size: 77px;
-
+    text-align: center;
+    color: #ECE2D7;
+    text-shadow: 2px 2px black;
+    width: 95%;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
 }
 
-.second {
+
+span.tree{
+    color: darkgreen;
+}
+span.number{
+    float: right;
     font-family: "cm", serif;
-    font-size: 60px;
-    position: absolute;
-    top: 600px;
-    left: 1500px;
+    color: #ECE2D7;
+    text-shadow: 2px 2px black;
+
+}
+span.last_row{
+
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+span.good_luck{
+
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+span.save_xmas{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+img {
+    width: 40% !important;
+    height: auto !important;
+    float: left;
+
 }
 
-.moth {
-    border-radius: 8px;
-    position: absolute;
-    top: 580px;
-    left: 1000px;
-}
+
 
 
 

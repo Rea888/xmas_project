@@ -1,28 +1,36 @@
-@extends('components.layout')
+<x-layout>
 
-<link href="{{ asset('css/introduction.css') }}" rel="stylesheet">
-<link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
-@section('content')
+    <x-slot name="scripts">
+        <link href="{{ asset('css/introduction.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
 
-    <div class="intro_content">
+    </x-slot>
 
-        <p class="first">Greetings,1
+
+    <div class="first" id="text-responsive">
+
+        <p><span class="tree">1</span>
             <br/>
-            we are looking for highly intelligent
+            Greetings,
             <br/>
-            individuals to free Santa Claus!
+            we are looking
+            <br/>
+            for highly intelligent
+            <br/>
+            individuals to free , Santa Claus!
             <br/>
             There is a message hidden in this image.
             <br/>
             Reveal it, and it will lead you on the road
             <br/>
-            to finding him. Save Christmas!
-            <br/>
-            Good luck! 2</p>
+            <img src="images/moth.png" class="img-fluid" alt="moth" />
+            <span class="last_row"> to finding him. </span>
+            <span class="save_xmas"> Save Christmas! </span>
+            <span class="number">3301</span>
+            <span class="good_luck">Good luck!</span>
 
-        <p class="second">3301</p>
+        </p>
     </div>
 
-    <a href='second'><img class="moth" src="/images/moth.png" alt="moth" width="300" height="300"></a>
 
-@stop
+</x-layout>

@@ -1,36 +1,44 @@
 body {
-
+    background: url(../images/xmas.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../images/xmas.jpg);
-    background-color: #192824;
+    -o-background-size: cover;
+
 }
+html,
+body{
+    height: 70%;
+}
+
+
+
+.container-fullwidth {
+    font-size: 4vh;
+    margin-top: 40vh;
+    text-align: center;
+}
+
+.text-responsive {
+    font-size: calc(100% + 3vw + 3vh);
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+
 
 :root {
     --shadow-color: #FF9E9E;
     --shadow-color-light: white;
 }
 
-* {
 
-    box-sizing: border-box;
-}
-
-
-p {
-    margin: calc(43vh - 40px) auto 0 auto;
-    font-size: 180px;
-
-    font-family: "Archivo Black", "Archivo", sans-serif;
-    font-weight: normal;
-    display: block;
-    height: auto;
-    text-align: center;
-}
 
 #demo {
     color: white;
     animation: neon 3s infinite;
+
 }
 
 @keyframes neon {

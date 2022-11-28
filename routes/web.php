@@ -1,26 +1,31 @@
 <?php
 
+use App\Http\Controllers\SolutionController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Middleware\ForbidAccessBeforeChristmas;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/introduction', function(){
-    return view('introduction');
+Route::middleware(ForbidAccessBeforeChristmas::class)->group(function () {
+
+    Route::get('/introduction', function () {
+        return view('introduction');
+    });
+
+    Route::get('/nice_job',function () {
+        return view('nice_job');
+    });
+    Route::post('/nice_job', [SolutionController::class , 'getSolution']) ->name('nice_job');
+
+    Route::get('/keep_going',function () {
+        return view('keep_going'); })->name('keep_going');
 });
 
-Route::get('/second', function(){
-    return "second puzle";
-});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

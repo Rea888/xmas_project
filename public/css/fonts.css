@@ -5,9 +5,9 @@
 }
 
 @font-face {
-    font-family: "ef";
-    src: local("/fonts/ef.ttf"),
-    url("/fonts/ef.ttf") format("truetype");
+    font-family: "Mc";
+    src: local("/fonts/Mc.ttf"),
+    url("/fonts/Mc.ttf") format("truetype");
 }
 
 @font-face {
@@ -22,10 +22,5 @@
     url("/fonts/cm.ttf") format("truetype");
 }
 
-@font-face {
-    font-family: "snow";
-    src: local("/fonts/snow.ttf"),
-    url("/fonts/snow.ttf") format("truetype");
-}
 
 
