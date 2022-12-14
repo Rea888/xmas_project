@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+
+    background: url(../images/sendingletter.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+}
+
+.row{
+    margin-top: 50%;
+    margin-right: 5% !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+span {
+    text-shadow: 2px 2px black;
+    margin-bottom: 5vh;
+    font-family: 'Mc', serif;
+    color: #005a18;
+    text-align: center;
+    font-size: 3.5em;
+    transform: translate(-30%,-30%);
+    background-image: linear-gradient(#c0392b, #c0392b);
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    transition: background-size .7s, background-position .5s ease-in-out;
+}
+
+span:hover {
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position .7s, background-size .5s ease-in-out;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    span{
+        font-size: 1em;
+        background-position: 100% -20%;
+        width: 30%;
+        text-shadow: 0.8px 0.8px black;
+        float: left;
+        margin-right: -10vw;
+        margin-bottom: 24vh;
+    }
+    .mySVG{
+        transform: scale(0.35);
+    }
+
+
+
+}
+

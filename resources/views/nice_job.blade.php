@@ -188,9 +188,8 @@
                         </div>
                         <div class="col-9" id="text-responsive">
                             <div class="text2" id="text-responsive">
-                                <h4>to:________Santa Claus______
-                                    <br>
-                                    from:{!!Form::text('name', null, array('placeholder'=>'First-Last name')) !!}</h4>
+                                <h4>to:________Santa Claus______</h4>
+                                <h4>from:{!!Form::text('name', null, array('placeholder'=>'First-Last name')) !!}</h4>
                                 <h4>reply:{!!Form::email('email', null, array('placeholder'=>'email address')) !!}</h4>
                                 <h4>solution:{!!Form::text('solution', null, array('placeholder'=>'text')) !!}</h4>
                                 <h4>{!! Form::button('Send     ', ['class' => 'button4' , 'type' => 'submit']) !!}</h4>
