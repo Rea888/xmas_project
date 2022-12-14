@@ -10,6 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
     protected $name= ['name'];
     protected $email = ['email'];
     /**

@@ -36,7 +36,7 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
@@ -50,12 +50,9 @@ return [
         ],
 
         'mailgun' => [
+
             'transport' => 'mailgun',
-            'domain' => 'vikicica.hu',
-            'secret' => 'your-mailgun-key',
-            'endpoint' => 'api.eu.mailgun.net',
-            'from' => ['address' => 'balazs.lengyak@gmail.com', 'name' => 'xmas_project'],
-            'reply_to' => ['address' => 'balazs.lengyak@gmail.com', 'name' => 'xmas_project'],
+
         ],
 
         'postmark' => [

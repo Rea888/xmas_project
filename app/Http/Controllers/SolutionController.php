@@ -10,24 +10,47 @@ use Illuminate\Support\Facades\Mail;
 
 class SolutionController extends Controller
 {
+    private const MY_EMAIL = 'm.rakhely.viktoria@gmail.com';
+    private const INPUT_KEY_SOLUTION = 'solution';
+    private const INPUT_KEY_NAME = 'name';
+    private const INPUT_KEY_EMAIL = 'email';
+
 
     public function getSolution(Request $request)
     {
-        $solutionInput = $request->input('solution');
-        $userInput = $request->input('name');
-        $emailInput = $request->input('email');
+        $solutionInput = $request->input(self::INPUT_KEY_SOLUTION);
+        $userInput = $request->input(self::INPUT_KEY_NAME);
+        $emailInput = $request->input(self::INPUT_KEY_EMAIL);
 
-        $solution = DB::table('solutioms')->where([
-            ['solution', '=', $solutionInput]])->first();
-        $user = DB::table('users')->where([
-            ['name', '=', $userInput], ['email', '=', $emailInput]])->first();
+        $solution = $this->getSolutionFromDb($solutionInput);
+        $user = $this->getUser($userInput, $emailInput);
+
 
         if (null !== $user && null !== $solution) {
-            //Mail::to($request->user())->send(new LetterSent());
+            Mail::raw('https://xmas.vikicica.hu/congratulation', function ($message) {
+                $message->from(self::MY_EMAIL);
+                $message->to('viki@csubee.hu');
+                $message->subject('solution');
+            });
             return redirect()->route('keep_going');
         } else {
             return view('nice_job');
         }
+
     }
+
+    public function getSolutionFromDb($solutionInput)
+    {
+        return DB::table('solutioms')->where([
+            ['solution', '=', $solutionInput]])->first();
+    }
+
+
+    public function getUser($userInput, $emailInput)
+    {
+        return DB::table('users')->where([
+            ['name', '=', $userInput], ['email', '=', $emailInput]])->first();
+    }
+
 
 }
