@@ -3,12 +3,15 @@
     <x-slot name="scripts">
         <link href="{{ asset('css/mosaic.css') }}" rel="stylesheet">
         <link href="{{ asset('css/fonts.css') }}" rel="stylesheet">
-        <script src="{{ asset('js/mosaic.js') }}" defer></script>
+        <script src="{{ asset('js/mosaic_draggable.js') }}" defer></script>
+
 
     </x-slot>
 
 
     <body id = "primary">
+
+
     <div id="moj"><img class="alignnone size-medium wp-image-8" src="images/image_part_001.jpg" width="200" height="200" alt=""  />
     </div>
     <div id="moj"><img class="alignnone size-full wp-image-9" src="images/image_part_002.jpg" width="200" height="200" alt=""  /></div>
