@@ -27,6 +27,10 @@ Route::middleware(ForbidAccessBeforeChristmas::class)->group(function () {
         return view('mosaic');
     });
 
+    Route::get('/well_done',function () {
+        return view('well_done');
+    });
+
 });
 
 
