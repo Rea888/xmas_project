@@ -22,6 +22,15 @@ Route::middleware(ForbidAccessBeforeChristmas::class)->group(function () {
 
     Route::get('/keep_going',function () {
         return view('keep_going'); })->name('keep_going');
+
+    Route::get('/mosaic',function () {
+        return view('mosaic');
+    });
+
+    Route::get('/well_done',function () {
+        return view('well_done');
+    });
+
 });
 
 

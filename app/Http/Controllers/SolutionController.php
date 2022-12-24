@@ -27,7 +27,7 @@ class SolutionController extends Controller
 
 
         if (null !== $user && null !== $solution) {
-            Mail::raw('https://xmas.vikicica.hu/congratulation', function ($message) {
+            Mail::raw('167.235.75.169', function ($message) {
                 $message->from(self::MY_EMAIL);
                 $message->to('viki@csubee.hu');
                 $message->subject('solution');
